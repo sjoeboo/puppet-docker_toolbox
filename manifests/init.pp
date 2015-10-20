@@ -1,9 +1,7 @@
 # This is a placeholder class.
-class docker_toolbox {
+class docker_toolbox ($version = '1.8.3'){
   package { 'Docker_Toolbox':
-#    provider => 'compressed_app',
     provider => 'pkgdmg',
-    source   => 'https://github.com/docker/toolbox/releases/download/v1.8.3/DockerToolbox-1.8.3.pkg',
-    #flavor   => 'zip',
+    source   => "https://github.com/docker/toolbox/releases/download/v${version}/DockerToolbox-${version}.pkg",
   }
 }
